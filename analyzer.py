@@ -17,7 +17,8 @@ def calculate_stats(prompts):
     return {
         "min": min(word_counts),
         "max": max(word_counts),
-        "avg": sum(word_counts) / len(word_counts)
+        "avg": sum(word_counts) / len(word_counts),
+        "num": len(word_counts)
     }
 
 # execution
@@ -30,3 +31,4 @@ print(f"Prompt Word Analysis:")
 print(f"Shortest prompt: {stats['min']} words")
 print(f"Longest prompt: {stats['max']} words")
 print(f"Average length: {stats['avg']:.1f} words")
+print(f"Number of prompts: {stats['num']} prompts")
