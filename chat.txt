@@ -1,0 +1,334 @@
+Skip to content
+This is a copy of a conversation between ChatGPT & Anonymous.
+
+Report content
+You said:
+Uploaded a file
+Consider these screenshots,
+
+This is our submission for milestone 1 of the Software Engineering project in uni. MIlestone 1.2 requires us to use GenAI to enhance and improve our user stories that are in the excel file provided.
+Your task is to improve the user stories/ replace stories as much as you can. But you are limited to only 50 User Stories.
+
+The case description is as follows:
+(
+GUC students must complete a 3-month internship before they are eligible for graduation.
+Many students manage to find internships on their own, while others may refer to the
+SCAD office for help. Consequently, the process of finding and completing an internship
+through the SCAD office includes the following:
+• Companies inform SCAD of internship opportunities, where internships offered can
+have a duration that starts with one month and extends until 6 months. Internships
+can be paid or unpaid.
+• Students need to navigate announcements made by companies recruiting interns
+until they find a suitable opportunity and apply for it.
+• Companies during the filtration process typically check CVs and conduct interviews
+before they offer internships to candidate students.
+• If accepted, students proceed with their intern jobs until they conclude the tasks
+required.
+• After the internship is successfully done, there are two types of evaluations that
+take place:
+– Companies evaluate the intern across several metrics and dimensions, and the
+intern evaluates the company in a free form feedback text.
+– Students can recommend the company to other interns, and they are required
+to provide input on the faculty courses that helped them the most during the
+internship.
+• The intern is then required to create a report designed by SCAD. The report has
+sections that provide an overview of the company’s business and market stand, the
+tasks performed by the intern, and the feedback about the company’s work environment and the helpful courses, together with the student’s recommendation
+
+You need to construct a web application (you may assume that it is connected to the
+university’s database) to help students, Faculty academics, companies and the
+SCAD office take care of the tasks mentioned in Section 2 above, where the entire
+process is digitized.
+)
+ChatGPT said:
+Reasoned about improving user stories for internship process for 53 seconds
+Below are 50 enhanced user stories that cover the full lifecycle of the internship process – from account creation and profile management, through internship search and application, to evaluations and reporting. Each story follows the “As a [persona], I want [feature] so that [benefit]” format to ensure clarity and focus:
+
+Company Account Registration
+ As a Company, I want to register for an account so that I can submit my internship listings for SCAD review.
+ Acceptance: The account is created in a “pending” state until a SCAD administrator approves it.
+
+Company Account Approval
+ As a SCAD administrator, I want to review and approve new company registrations so that only verified companies can post internship opportunities.
+ Acceptance: The system changes the account status from pending to approved once reviewed.
+
+Secure Company Login
+ As a Company, I want to securely log in to my account so that I can access my dashboard and manage my postings.
+ Acceptance: Authentication is implemented with role-based access control.
+
+Document Upload During Registration
+ As a Company, I want to upload required documents during registration so that SCAD can verify my credentials before approving my account.
+ Acceptance: The system supports file uploads with proper validation.
+
+Multi-Persona Secure Login
+ As a User (Student, Faculty, SCAD, or Company), I want to log in with my credentials so that I can access features specific to my role.
+ Acceptance: The login mechanism routes users to their respective dashboards based on their role.
+
+Student Profile Creation on First Login
+ As a Student, I want to create my profile upon first login so that my academic and professional details are up-to-date.
+ Acceptance: A guided profile setup is prompted on the first login.
+
+Company Profile Customization
+ As a Company, I want to customize my profile with a logo, bio, and contact details so that students can learn more about my organization.
+ Acceptance: Editable profile fields are available post-approval.
+
+View Other Profiles with Privacy
+ As a User, I want to view other users’ profiles (with limited details for non-approved accounts) so that I can understand more about potential collaborators or employers.
+ Acceptance: Privacy settings are enforced per user role.
+
+Student CV Management
+ As a Student, I want to create, update, and delete multiple CVs so that I can choose the most relevant one when applying for internships.
+ Acceptance: The system allows CRUD operations on CVs.
+
+Attach Preferred CV to Application
+ As a Student, I want to select which CV to attach to an internship application so that I can present the most suitable version of my qualifications.
+ Acceptance: The application form lets me choose from my uploaded CVs.
+
+LinkedIn Integration
+ As a Student, I want to link my LinkedIn account to my profile so that companies can quickly review my professional background.
+ Acceptance: Integration via OAuth is supported.
+
+Internship Progress Tracker
+ As a Student, I want to track the progress of my internship applications so that I know how many opportunities remain before I graduate.
+ Acceptance: A dashboard shows status updates for each application.
+
+SCAD Account Removal
+ As a SCAD administrator, I want to remove user accounts when necessary so that inactive or non-compliant accounts are eliminated from the system.
+ Acceptance: A secure deletion process is available with confirmation prompts.
+
+Company Self-Service Account Deletion
+ As a Company, I want to delete my account if needed so that I can remove my details from the system on demand.
+ Acceptance: The system provides a self-service account deletion option.
+
+Company Follow Feature for Students
+ As a Student, I want to follow company profiles so that I receive updates on new internship postings and company activities.
+ Acceptance: A follow/unfollow mechanism is implemented.
+
+Internship Listing Submission Request
+ As a Company, I want to submit a request for posting internship listings so that my opportunities can be reviewed by SCAD and Faculty.
+ Acceptance: A submission request triggers notifications for the relevant reviewers.
+
+Review of Listing Requests
+ As a SCAD administrator and Faculty academic, I want to review internship listing requests so that I can approve or deny them based on quality and relevance.
+ Acceptance: A review interface shows all submission details with decision options.
+
+Faculty Notification for New Listings
+ As a Faculty academic, I want to receive notifications about new internship listing requests so that I can quickly evaluate opportunities relevant to my department.
+ Acceptance: Notifications are sent via email or in-app alerts.
+
+Mark Listings as Relevant or Irrelevant
+ As a Faculty academic, I want to mark internship listings as relevant or irrelevant so that only suitable opportunities reach students.
+ Acceptance: Listings not marked as relevant by any faculty are automatically denied.
+
+SCAD Listing Status Dashboard
+ As a SCAD administrator, I want to monitor the status of internship listing requests so that I have visibility into which listings have been approved or denied.
+ Acceptance: A dashboard displays current listing statuses and pending actions.
+
+Publication of Approved Listings
+ As a SCAD administrator, I want to publish approved internship listings so that students can view and apply for these opportunities.
+ Acceptance: Only approved listings become publicly visible.
+
+Listing Decision Notifications for Companies
+ As a Company, I want to receive notifications about the decision on my internship listing submission so that I know when my posting is live.
+ Acceptance: Notifications are automatically sent upon decision.
+
+Browsing Internship Listings
+ As a Student, I want to view available internship listings so that I can explore opportunities that match my interests.
+ Acceptance: Listings are presented in an organized, searchable format.
+
+Filtering Internship Listings
+ As a Student, I want to filter internship listings by duration, payment status, and field of study so that I can quickly find opportunities that meet my criteria.
+ Acceptance: Robust filtering options are available on the search page.
+
+Bookmarking Internship Opportunities
+ As a Student, I want to bookmark internship listings so that I can easily return to promising opportunities later.
+ Acceptance: The system offers a bookmarking feature for saved listings.
+
+Direct Messaging with Recruiters
+ As a Student, I want to send direct inquiries to company recruiters about an internship so that I can clarify role specifics before applying.
+ Acceptance: An in-app messaging or contact form is provided.
+
+Sharing Internship Listings with Peers
+ As a Student, I want to share internship listings via a unique link so that I can help my colleagues discover relevant opportunities.
+ Acceptance: A shareable link is generated for each listing.
+
+Real-Time Internship Notifications
+ As a Student, I want to receive real-time notifications when new internship listings are published so that I can apply as soon as opportunities become available.
+ Acceptance: Notifications are delivered promptly through email or the app.
+
+Internship Application Submission
+ As a Student, I want to apply for an internship directly through the platform so that I can streamline the application process.
+ Acceptance: The application form integrates CV selection and necessary personal details.
+
+Application Status Tracking
+ As a Student, I want to track the status of my internship applications so that I know whether I am under review, scheduled for an interview, or accepted.
+ Acceptance: Status updates (e.g., submitted, reviewed, interviewed, accepted, rejected) are visible.
+
+Detailed Internship Descriptions
+ As a Student, I want to read comprehensive descriptions of internship opportunities so that I understand the role’s requirements and expectations before applying.
+ Acceptance: Each listing includes detailed information, including company background and role details.
+
+Application Management for Companies
+ As a Company, I want to view and manage all received internship applications so that I can efficiently shortlist candidates for interviews.
+ Acceptance: A centralized application dashboard is provided.
+
+Interview Scheduling Integration
+ As a Company, I want to schedule interviews with shortlisted candidates directly through the platform so that I can streamline the recruitment process.
+ Acceptance: A calendar or scheduling interface is integrated.
+
+Digital Evaluation Form Request
+ As a Company, I want to request a standardized digital evaluation form for my interns so that I can provide consistent feedback on their performance.
+ Acceptance: Requesting the form triggers an evaluation workflow.
+
+Comprehensive Evaluation Form Design
+ As a Company, I want an evaluation form that includes ratings, multiple choice, sliders, and text fields so that I can assess interns across various dimensions.
+ Acceptance: The form contains diverse input elements for a holistic evaluation.
+
+Submission of Evaluation Forms
+ As a Company, I want to submit completed evaluation forms to SCAD so that the internship process is formally closed and documented.
+ Acceptance: A submission confirmation is provided and forms are stored securely.
+
+External Company Evaluation Upload
+ As a Student, I want to upload evaluation forms from companies that aren’t registered on the platform so that my performance can still be assessed.
+ Acceptance: An upload interface accepts external evaluation documents.
+
+Access to Evaluation Feedback
+ As a Student, I want to view the feedback provided by companies on my performance so that I can improve in future internships.
+ Acceptance: Evaluation reports are available in a read-only format.
+
+Free-Form Company Feedback Submission
+ As a Student, I want to submit free-form feedback about my internship experience with a company so that future interns gain valuable insights.
+ Acceptance: A text input field allows open-ended feedback.
+
+Company Rating by Interns
+ As a Student, I want to rate companies on a standardized scale after my internship so that peers can make informed decisions about where to apply.
+ Acceptance: A star or numeric rating system is implemented.
+
+Download Internship Report Template
+ As a Student, I want to download the latest SCAD-designed internship report template so that I can accurately document my experience.
+ Acceptance: A current version of the template is available for download.
+
+Internship Report Submission
+ As a Student, I want to upload my completed internship report so that SCAD can evaluate my internship performance.
+ Acceptance: A secure upload mechanism accepts report files with type and size validation.
+
+Evaluation Form Review Dashboard
+ As a SCAD administrator or Faculty academic, I want to review all submitted evaluation forms from companies and students so that I can verify and finalize the internship period.
+ Acceptance: A consolidated dashboard displays all evaluations for review.
+
+Internship Period Approval
+ As a SCAD administrator or Faculty academic, I want to approve or deny the internship period based on evaluation results so that I can officially validate the student’s internship completion.
+ Acceptance: A decision interface is provided with immediate notification to the student.
+
+Internship Verdict Notifications
+ As a Student, I want to receive notifications regarding the final verdict of my internship period so that I know if my internship is approved or requires additional work.
+ Acceptance: Automated notifications are sent once a decision is made.
+
+Course Feedback on Internship Relevance
+ As a Student, I want to provide feedback on which faculty courses aided me during my internship so that the university can refine its curriculum.
+ Acceptance: A structured feedback form is available for course evaluations.
+
+Company Recommendation Feature
+ As a Student, I want to recommend companies I interned with so that my peers can identify high-quality internship opportunities.
+ Acceptance: Recommendations can be submitted along with optional comments.
+
+Automated Internship Matching
+ As a Student, I want the system to suggest internship opportunities based on my profile and academic major so that I can discover relevant opportunities more easily.
+ Acceptance: A recommendation engine uses profile data and filters to generate suggestions.
+
+Real-Time Application Notifications for Companies
+ As a Company, I want to receive real-time notifications when a student applies for an internship so that I can promptly review and act on new applications.
+ Acceptance: Immediate alerts (via email or in-app) are triggered on each application submission.
+
+Analytics Dashboard for Internship Program
+ As a SCAD administrator, I want access to an analytics dashboard that tracks key metrics (such as application volume, approval rates, and internship outcomes) so that I can monitor and improve the effectiveness of the internship program.
+ Acceptance: The dashboard presents up-to-date reports and visualizations of key performance indicators.
+
+These 50 refined user stories provide a comprehensive, clear, and user-focused blueprint for the web application that digitizes the entire internship process for GUC students, companies, faculty, and SCAD administrators.
+
+You said:
+Can you provide me with an excel file that contains the same sheet structure as shown in the pdf I sent you?
+Column 1: Module (Choose from Profile and Identity Module, Internship Search and Recruitment Module and Evaluation and Reporting Module)
+Column 2: "Depends on User Story ID" Which you'll right the Requirement ID of the function that is depended on
+Column 3: "Requirement ID"
+Column 4: "As A" Which contains the persona name (Student, SCADMIN, FACulty Academic or Company)
+Column 5: "I want to" which contains the actual requirement
+Column 6: "So that" which contains the reason why you want that requirement.
+ChatGPT said:
+Reasoned for 1m 52s
+Below is a CSV‐formatted version of an Excel sheet that mimics the structure from your PDF. You can save the text below into a file (for example, “User_Stories.csv”) and open it in Excel. Each row corresponds to one of the 50 enhanced user stories, with the columns:
+
+• Module
+• Depends on User Story ID (the Requirement ID this function depends on, if applicable; if not, the cell is left blank)
+• Requirement ID
+• As A
+• I want to
+• So that
+
+Below is the CSV content:
+
+Module,Depends on User Story ID,Requirement ID,As A,I want to,So that
+Profile and Identity Module,,1,Company,register for an account,can submit my internship listings for SCAD review
+Profile and Identity Module,1,2,SCADMIN,review and approve new company registrations,only verified companies can post internship opportunities
+Profile and Identity Module,2,3,Company,securely log in to my account,access my dashboard and manage my postings
+Profile and Identity Module,1,4,Company,upload required documents during registration,SCAD can verify my credentials before approving my account
+Profile and Identity Module,,5,User (Student, SCADMIN, Faculty Academic or Company),log in with my credentials,access features specific to my role
+Profile and Identity Module,5,6,Student,create my profile upon first login,ensure my academic and professional details are up-to-date
+Profile and Identity Module,2,7,Company,customize my profile with a logo, bio, and contact details,allow students to learn more about my organization
+Profile and Identity Module,5,8,User,view other users’ profiles with limited details,understand more about potential collaborators or employers
+Profile and Identity Module,6,9,Student,create, update, and delete multiple CVs,choose the most relevant CV when applying for internships
+Profile and Identity Module,9,10,Student,select which CV to attach to an internship application,present the most suitable version of my qualifications
+Profile and Identity Module,6,11,Student,link my LinkedIn account to my profile,allow companies to quickly review my professional background
+Profile and Identity Module,5,12,Student,track the progress of my internship applications,know how many opportunities remain before I graduate
+Profile and Identity Module,,13,SCADMIN,remove user accounts when necessary,eliminate inactive or non-compliant accounts from the system
+Profile and Identity Module,,14,Company,delete my account if needed,ensure my details are no longer accessible in the system
+Profile and Identity Module,7,15,Student,follow company profiles,receive updates on new internship postings and company activities
+Internship Search and Recruitment Module,2,16,Company,submit a request for posting internship listings,have my opportunities reviewed by SCAD and Faculty
+Internship Search and Recruitment Module,16,17,SCADMIN/Faculty Academic,review internship listing requests,approve or deny them based on quality and relevance
+Internship Search and Recruitment Module,16,18,Faculty Academic,receive notifications about new internship listing requests,evaluate opportunities relevant to my department quickly
+Internship Search and Recruitment Module,16,19,Faculty Academic,mark internship listings as relevant or irrelevant,ensure only suitable opportunities reach students
+Internship Search and Recruitment Module,17,20,SCADMIN,monitor the status of internship listing requests,have visibility into approved or denied listings
+Internship Search and Recruitment Module,17,21,SCADMIN,publish approved internship listings,allow students to view and apply for these opportunities
+Internship Search and Recruitment Module,17,22,Company,receive notifications about the decision on my listing submission,know when my posting is live
+Internship Search and Recruitment Module,,23,Student,view available internship listings,explore opportunities that match my interests
+Internship Search and Recruitment Module,23,24,Student,filter internship listings by duration, payment status, and field of study,find opportunities that meet my criteria quickly
+Internship Search and Recruitment Module,23,25,Student,bookmark internship listings,easily return to promising opportunities later
+Internship Search and Recruitment Module,23,26,Student,send direct inquiries to company recruiters about an internship,clarify role specifics before applying
+Internship Search and Recruitment Module,23,27,Student,share internship listings via a unique link,help my colleagues discover relevant opportunities
+Internship Search and Recruitment Module,21,28,Student,receive real-time notifications when new internship listings are published,apply as soon as opportunities become available
+Internship Search and Recruitment Module,23,29,Student,apply for an internship directly through the platform,streamline the application process
+Internship Search and Recruitment Module,29,30,Student,track the status of my internship applications,know whether I am under review, interviewed, accepted, or rejected
+Internship Search and Recruitment Module,23,31,Student,read comprehensive internship descriptions,understand the role’s requirements and expectations before applying
+Internship Search and Recruitment Module,29,32,Company,view and manage all received internship applications,efficiently shortlist candidates for interviews
+Internship Search and Recruitment Module,32,33,Company,schedule interviews with shortlisted candidates directly through the platform,streamline the recruitment process
+Internship Search and Recruitment Module,6,48,Student,receive automated internship suggestions based on my profile and academic major,discover relevant opportunities more easily
+Internship Search and Recruitment Module,29,49,Company,receive real-time notifications when a student applies for an internship,promptly review and act on new applications
+Evaluation and Reporting Module,,34,Company,request a standardized digital evaluation form for my interns,provide consistent feedback on their performance
+Evaluation and Reporting Module,34,35,Company,have an evaluation form that includes ratings, multiple choice, sliders, and text fields,assess interns across various dimensions
+Evaluation and Reporting Module,35,36,Company,submit completed evaluation forms to SCAD,formally close and document the internship process
+Evaluation and Reporting Module,36,37,Student,upload evaluation forms from companies not registered on the platform,ensure my performance can still be assessed
+Evaluation and Reporting Module,36,38,Student,view the feedback provided by companies on my performance,improve in future internships
+Evaluation and Reporting Module,36,39,Student,submit free-form feedback about my internship experience with a company,provide valuable insights for future interns
+Evaluation and Reporting Module,36,40,Student,rate companies on a standardized scale after my internship,help peers make informed decisions about where to apply
+Evaluation and Reporting Module,,41,Student,download the latest SCAD-designed internship report template,accurately document my experience
+Evaluation and Reporting Module,41,42,Student,upload my completed internship report,allow SCAD to evaluate my internship performance
+Evaluation and Reporting Module,36,43,SCADMIN/Faculty Academic,review all submitted evaluation forms from companies and students,verify and finalize the internship period
+Evaluation and Reporting Module,43,44,SCADMIN/Faculty Academic,approve or deny the internship period based on evaluation results,officially validate the student’s internship completion
+Evaluation and Reporting Module,44,45,Student,receive notifications regarding the final verdict of my internship period,know if my internship is approved or requires additional work
+Evaluation and Reporting Module,,46,Student,provide feedback on which faculty courses aided me during my internship,help the university refine its curriculum
+Evaluation and Reporting Module,,47,Student,recommend companies I interned with,help peers identify high-quality internship opportunities
+Evaluation and Reporting Module,,50,SCADMIN,access an analytics dashboard that tracks key internship metrics,monitor and improve the effectiveness of the internship program
+If you’d like an actual Excel (.xlsx) file rather than a CSV, let me know and I can provide further instructions on converting this CSV content into an Excel workbook.
+
+
+
+
+
+
+Search
+
+Reason
+
+
+ChatGPT can make mistakes. Check important info.
+?
