@@ -24,7 +24,6 @@ def calculate_stats(prompts):
 # execution
 chat_log = read_chat("chat.txt")
 prompts = extract_prompts(chat_log)
-print("Debug - Extracted prompts:", prompts)
 stats = calculate_stats(prompts)
 
 print(f"Prompt Word Analysis:")
