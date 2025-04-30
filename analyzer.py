@@ -26,8 +26,17 @@ chat_log = read_chat("chat.txt")
 prompts = extract_prompts(chat_log)
 stats = calculate_stats(prompts)
 
+# calcualtes the number of conversations and average number of prompts/conversation
+conversation_pattern = r"Skip to content(.*?)ChatGPT can make mistakes\. Check important info\."
+conversations = re.findall(conversation_pattern, chat_log, re.DOTALL | re.IGNORECASE)
+num_conversations = len(conversations)
+avg_prompts_per_convo = stats['num'] / num_conversations
+
 print(f"Prompt Word Analysis:")
+print(f"Number of conversations: {num_conversations}")
+print(f"Average prompts per conversation: {avg_prompts_per_convo:.1f}")
+print(f"Number of prompts: {stats['num']} prompts")
 print(f"Shortest prompt: {stats['min']} words")
 print(f"Longest prompt: {stats['max']} words")
 print(f"Average length: {stats['avg']:.1f} words")
-print(f"Number of prompts: {stats['num']} prompts")
+print(f"{stats['min']}, {stats['max']}, {stats['avg']:.1f}")
